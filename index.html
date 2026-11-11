@@ -60,6 +60,29 @@
   </header>
 
   <main id="main-content">
+    <section class="section" aria-labelledby="video-heading">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3" id="video-heading">Video Results</h2>
+            <div class="content has-text-justified">
+              <p>Original and refined meshes, each with skinning weights predicted by Puppeteer,
+                using the same ground-truth skeleton, joint motion, and camera.</p>
+            </div>
+            <video id="comparison-video" class="comparison-video" autoplay controls muted loop playsinline preload="metadata" width="1920" height="1440" poster="static/images/comparison-poster.png" aria-label="Original and refined fish meshes with identical joint motion and enlarged tail views">
+              <source src="static/videos/comparison.webm" type="video/webm">
+              <source src="static/videos/comparison.mp4" type="video/mp4">
+              <p>Your browser does not support embedded video. <a href="static/videos/comparison.mp4">Download the comparison video</a>.</p>
+            </video>
+            <div class="content comparison-caption">
+              <p>Refinement reduces the number of vertices from 1,098 to 274 while retaining all 544 faces.
+                <a href="https://github.com/Budy123/Deformation-Aware-Mesh-Refinement/blob/main/examples/axl2_fish/README.md#fresh-inference-video" target="_blank" rel="noopener noreferrer">Demo details</a>.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="hero teaser" aria-labelledby="observation-heading">
       <div class="container is-max-desktop">
         <div class="hero-body">
@@ -195,21 +218,6 @@
             <p class="figure-caption"><strong>(a)</strong> Ground-truth skinning; <strong>(b)</strong> original mesh;
               <strong>(c)</strong> Ma et al.; <strong>(d)</strong> Blender; <strong>(e)</strong> ours.
               Red regions indicate back-facing triangles exposed by surface cracks.</p>
-            <h3 class="title is-5 example-heading">Animated Example</h3>
-            <div class="content has-text-justified">
-              <p>In the Fish1 example, refinement reduces the number of vertices from 1,098 to 274
-                while retaining all 544 faces. The animation compares deformation before and after refinement.</p>
-            </div>
-            <video id="comparison-video" class="comparison-video" autoplay controls muted loop playsinline preload="metadata" width="1920" height="1440" poster="static/images/comparison-poster.png" aria-label="Original and refined fish meshes with identical joint motion and enlarged tail views">
-              <source src="static/videos/comparison.webm" type="video/webm">
-              <source src="static/videos/comparison.mp4" type="video/mp4">
-              <p>Your browser does not support embedded video. <a href="static/videos/comparison.mp4">Download the comparison video</a>.</p>
-            </video>
-            <div class="content comparison-caption">
-              <p>Original and refined meshes, each with skinning weights predicted by Puppeteer,
-                using the same ground-truth skeleton, joint motion, and camera.
-                <a href="https://github.com/Budy123/Deformation-Aware-Mesh-Refinement/blob/main/examples/axl2_fish/README.md#fresh-inference-video" target="_blank" rel="noopener noreferrer">Demo details</a>.</p>
-            </div>
           </div>
         </div>
       </div>
