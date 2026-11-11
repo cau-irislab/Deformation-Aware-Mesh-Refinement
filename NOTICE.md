@@ -2,10 +2,13 @@
 
 ## Page template
 
-The page structure and visual style are adapted from the IRIS Lab project page:
-https://github.com/cau-irislab/Deformable-3D-ADV
+The page structure and visual style follow the IRIS Lab SeeingSpeech page:
+https://github.com/cau-irislab/NeurIPS2026-SeeingSpeech
 
-Reference revision: 6b2ecdc65178b19bdd18306a2036789d6b6a8368.
+Reference index.html blob: ea322b17c0d42d220e203281e230891f8c274193.
+Reference assets/css/index.css blob: c75535c79cf69a96ea21d4e34ff6bd55c3b0c7bd.
+The earlier draft also referenced Deformable-3D-ADV at revision
+6b2ecdc65178b19bdd18306a2036789d6b6a8368.
 
 That page credits the Academic Project Page Template, adopted from Nerfies:
 
@@ -24,8 +27,15 @@ License: https://creativecommons.org/licenses/by-sa/4.0/
 - Bulma 0.9.1: MIT, Copyright (c) 2020 Jeremy Thomas.
   The existing stylesheet and its header are retained; full license:
   `static/licenses/Bulma-MIT.txt`.
-- Noto Sans variable font: SIL Open Font License 1.1, Copyright 2022
-  The Noto Project Authors. Full license: `static/fonts/OFL.txt`.
+- Google Sans and Noto Sans are requested through the same Google Fonts
+  stylesheet as the reference page; they are served by Google, not redistributed
+  in this repository. The bundled Noto Sans variable font is an offline fallback:
+  SIL Open Font License 1.1, Copyright 2022 The Noto Project Authors.
+  Full license: `static/fonts/OFL.txt`.
+- Font Awesome Free 6.7.2 GitHub and PDF SVG icons: CC BY 4.0, Copyright 2024
+  Fonticons, Inc. Attribution comments are retained in the SVGs; complete
+  third-party license: `static/licenses/Font-Awesome-Free.txt`.
+  The GitHub logo is used only to identify the linked GitHub code repository.
 
 ## Paper figures
 
@@ -34,6 +44,18 @@ Automatic Rigging**, by Hyun Wook Kim, Sanglim Han and Hak Gu Kim, Chung-Ang
 University. The author supplied them for use in project materials. The figures
 and third-party assets depicted retain their respective rights; the template
 license and software MIT license do not grant blanket rights to them.
+
+The page includes all three author-supplied figures: observations (Fig. 1),
+pipeline (Fig. 2), and qualitative comparisons (Fig. 3). Fig. 3 uses the updated
+`Fig3_qualitativeResults-aligned.pdf` supplied by the author. It is rendered
+from the complete PDF on a white background, without cropping or
+altering its contents. Its method-row labels are explained in the page caption.
+Numerical comparison and ablation tables are transcribed from Tables I–IV of
+the author-supplied manuscript; they are not newly computed experiments.
+SO values and the additional averaging/shared-weight comparisons are from the
+author-supplied revision response v0.3. The original manuscript values and
+additional comparisons are kept in their respective tables, not silently
+combined as a new experimental run.
 
 ## Fish1 comparison video and poster
 
