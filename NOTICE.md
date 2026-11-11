@@ -50,12 +50,12 @@ pipeline (Fig. 2), and qualitative comparisons (Fig. 3). Fig. 3 uses the updated
 `Fig3_qualitativeResults-aligned.pdf` supplied by the author. It is rendered
 from the complete PDF on a white background, without cropping or
 altering its contents. Its method-row labels are explained in the page caption.
-Numerical comparison and ablation tables are transcribed from Tables I–IV of
-the author-supplied manuscript; they are not newly computed experiments.
-SO values and the additional averaging/shared-weight comparisons are from the
-author-supplied revision response v0.3. The original manuscript values and
-additional comparisons are kept in their respective tables, not silently
-combined as a new experimental run.
+The page includes only the main comparison and Face Removal tables, transcribed
+from Tables I and IV of the author-supplied manuscript, with SO values from the supplied
+revision response v0.3. Data-cell bold/underline follows these source documents;
+the website does not independently rank or add emphasis to the results.
+These are source results, not newly computed experiments. Other ablation,
+averaging and shared-weight tables are not included.
 
 ## Fish1 comparison video and poster
 
