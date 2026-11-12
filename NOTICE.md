@@ -17,7 +17,7 @@ That page credits the Academic Project Page Template, adopted from Nerfies:
 
 The adapted page template retains the Creative Commons Attribution-ShareAlike
 4.0 International notice. The project title, authors, text, media and links
-were replaced for this project; unused viewers, carousels and scripts were
+were replaced for this project; unused viewers and scripts were
 not included. Attribution is retained in the visible page footer.
 
 License: https://creativecommons.org/licenses/by-sa/4.0/
@@ -60,11 +60,11 @@ averaging and shared-weight tables are not included.
 ## Fish1 comparison video and poster
 
 Fish1 by Quaternius is CC0 1.0, distributed here through its Articulation-XL2.0
-dataset derivative (CC BY 4.0), with Puppeteer skinning predictions. The video
-in MP4 format and its first-frame poster are copied unchanged from the existing
-demo. A lossless VP9 WebM copy is included for browser compatibility; all 80
-decoded YUV420 video frames match the MP4. No model inference, geometry changes
-or motion changes were made for this page.
+dataset derivative (CC BY 4.0), with Puppeteer skinning predictions. The saved
+demo geometry, weights, motion, camera and enlarged tail view are rerendered
+with two matched display modes: backface culling and visible back faces in red.
+MP4 and WebM copies are included for browser compatibility. No model inference,
+geometry changes or motion changes were made for this page.
 
 - Original: https://quaternius.com/packs/animatedfish.html
 - Dataset: https://huggingface.co/datasets/Seed3D/Articulation-XL2.0
@@ -74,3 +74,32 @@ or motion changes were made for this page.
 
 The separate implementation repository retains its own license:
 https://github.com/Budy123/Deformation-Aware-Mesh-Refinement
+
+## Additional comparison animations
+
+Five additional animations use saved Articulation-XL2.0 comparison meshes with
+Puppeteer-predicted weights on the original mesh and density-fused weights on
+the refined mesh. They do not rerun inference, refinement, or quantitative
+evaluation. Both meshes use identical illustrative joint rotations and a fixed
+camera. These are presentation motions, not the randomly sampled metric poses
+or the manually posed frames in Fig. 3. Both display modes use the same
+per-pixel depth renderer and light wireframes. Red denotes a visible back-facing
+triangle, not a GT error classification. No gaps or offsets are added to meshes.
+Each example includes a full view and an enlarged view. Zooming changes only the camera
+viewport: no faces are deleted, and both meshes/modes share the same framing.
+Comparison labels and enlarged-region names are displayed as fixed-size HTML
+text. Space previously used for embedded text is allocated to larger full-mesh
+viewports. No model geometry is removed. Vertex/face counts are omitted in all clips.
+
+Dataset source: https://huggingface.co/datasets/Seed3D/Articulation-XL2.0
+(dataset license: CC BY 4.0). Model identifiers:
+
+- Mammoth: `27b8e1b2-27b7-52d2-96de-375a53b5f5c5`.
+- Character: `195b4578-8564-526b-b01a-9c3f6fba535e`.
+- Gingerbread: `8f01449b-9de6-5ce4-ac8e-6019d2572ddd`.
+- Dinosaur: `02bc9195-1d80-516a-8060-f754d95e3243`.
+- Badger: `388bf3c9-a748-5b88-b924-46a8d593e611`.
+
+Only rendered comparisons are included, not source models or textures.
+Depicted models retain their respective rights; the website-template license
+and implementation MIT license do not relicense these assets.

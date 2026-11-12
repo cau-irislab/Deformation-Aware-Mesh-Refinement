@@ -20,6 +20,55 @@ body { font-family: 'Noto Sans', 'Noto Sans Local', sans-serif; }
 .teaser .subtitle { margin-top: 1rem; }
 .comparison-video { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; }
 .comparison-caption { margin-top: 1rem; }
+.examples-container { max-width: 1320px !important; }
+.examples-intro { max-width: 800px; margin: 0 auto 1.75rem; text-align: center; }
+.example-track {
+  --visible: 3;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% - (var(--visible) - 1) * 20px) / var(--visible));
+  gap: 20px;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  padding: 4px 0 14px;
+}
+.example-track::-webkit-scrollbar { display: none; }
+.examples-carousel { position: relative; }
+.example-card { min-width: 0; scroll-snap-align: start; }
+.example-card h3 { text-align: center; font-size: 1.1rem; font-weight: 600; margin-bottom: .75rem; }
+.example-card video { background: #fafafa; border: 1px solid #e8e8e8; border-radius: 8px; }
+.example-card video[hidden] { display: none; }
+.comparison-labels { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0; font-size: 15px; font-weight: 500; line-height: 1.5; text-align: center; color: #303030; padding: 6px 0; }
+.comparison-labels.zoom-labels { color: #535b65; }
+.backface-controls { display: flex; justify-content: center; gap: 0; margin-bottom: .85rem; }
+.backface-controls button { min-height: 44px; padding: 7px 12px; border: 1px solid #c8cdd3; background: white; color: #4a4a4a; font: inherit; font-size: .85rem; cursor: pointer; }
+.backface-controls button:first-child { border-radius: 6px 0 0 6px; }
+.backface-controls button:last-child { border-radius: 0 6px 6px 0; border-left: 0; }
+.backface-controls button[aria-pressed="true"] { background: #3273dc; border-color: #3273dc; color: white; font-weight: 600; }
+.backface-controls button:hover:not([aria-pressed="true"]):not(:disabled) { background: #eef3f8; }
+.backface-controls button:disabled { cursor: wait; opacity: .65; }
+.mode-status { height: 1.5em; line-height: 1.5; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-size: .8rem; text-align: center; color: #666; margin-top: .25rem; }
+.example-card .example-link { display: block; text-align: center; font-size: .85rem; margin-top: .65rem; }
+.carousel-controls { display: flex; align-items: center; justify-content: center; margin-top: .4rem; min-height: 32px; }
+.carousel-controls > button { position: absolute; top: calc(50% - 22px); z-index: 2; width: 44px; height: 44px; border-radius: 50%; border: 0; box-shadow: 0 3px 14px #0002; background: white; color: #3273dc; cursor: pointer; font-size: 1rem; }
+#examples-previous { left: -22px; }
+#examples-next { right: -22px; }
+.carousel-controls button:hover:not(:disabled) { background: #eef3f8; border-color: #3273dc; }
+.carousel-controls button:active:not(:disabled) { transform: translateY(1px); }
+.carousel-controls button:disabled { color: #999; background: #f5f5f5; cursor: default; }
+.carousel-controls output { min-width: 85px; text-align: center; font-size: .9rem; color: #555; }
+.carousel-dots { display: flex; justify-content: center; align-items: center; }
+.carousel-dots button { display: grid; place-items: center; width: 28px; height: 32px; padding: 0; border: 0; background: transparent; cursor: pointer; }
+.carousel-dots button::before { content: ''; width: 8px; height: 8px; border-radius: 50%; background: #333; transition: transform .15s; }
+.carousel-dots button[aria-current="true"]::before { transform: scale(1.5); background: #000; }
+@media (prefers-reduced-motion: reduce) { .carousel-dots button::before { transition: none; } }
+@media (max-width: 600px) { #examples-previous { left: -15px; } #examples-next { right: -15px; } }
+.example-track:focus-visible { outline: 3px solid #3273dc; outline-offset: 4px; }
+.examples-note { font-size: .85rem; color: #666; max-width: 800px; margin: 1.25rem auto 0; text-align: center; }
+@media (max-width: 1023px) { .example-track { --visible: 2; } }
+@media (max-width: 600px) { .example-track { --visible: 1; } }
 .method-figure { margin-top: 1.5rem; margin-bottom: 2rem; }
 .resource-links { line-height: 2; }
 .result-table th, .result-table td { text-align: center !important; vertical-align: middle !important; font-size: .9rem; }

@@ -61,25 +61,72 @@
 
   <main id="main-content">
     <section class="section" aria-labelledby="video-heading">
-      <div class="container is-max-desktop">
-        <div class="columns is-centered has-text-centered">
-          <div class="column is-four-fifths">
-            <h2 class="title is-3" id="video-heading">Video Results</h2>
-            <div class="content has-text-justified">
-              <p>Original and refined meshes, each with skinning weights predicted by Puppeteer,
-                using the same ground-truth skeleton, joint motion, and camera.</p>
-            </div>
-            <video id="comparison-video" class="comparison-video" autoplay controls muted loop playsinline preload="metadata" width="1920" height="1440" poster="static/images/comparison-poster.png" aria-label="Original and refined fish meshes with identical joint motion and enlarged tail views">
-              <source src="static/videos/comparison.webm" type="video/webm">
-              <source src="static/videos/comparison.mp4" type="video/mp4">
-              <p>Your browser does not support embedded video. <a href="static/videos/comparison.mp4">Download the comparison video</a>.</p>
+      <div class="container examples-container">
+        <h2 class="title is-3 has-text-centered" id="video-heading">Video Results</h2>
+        <p class="examples-intro">Original and refined meshes under the same joint motion and camera.
+          Use the arrows or swipe to browse the examples.</p>
+        <div class="examples-carousel">
+        <div class="example-track" id="example-track" tabindex="0" role="region" aria-roledescription="carousel" aria-label="Six mesh comparison examples">
+          <article class="example-card" data-example="mammoth" aria-label="1 of 6: Mammoth">
+            <h3>Mammoth</h3>
+            <video class="comparison-video" autoplay controls muted loop playsinline preload="metadata" width="1000" height="750" poster="static/videos/compare/mammoth/culling.png" aria-label="Original and refined mammoth under the same joint motion">
+              <source src="static/videos/compare/mammoth/culling.webm" type="video/webm">
+              <source src="static/videos/compare/mammoth/culling.mp4" type="video/mp4">
             </video>
-            <div class="content comparison-caption">
-              <p>Refinement reduces the number of vertices from 1,098 to 274 while retaining all 544 faces.
-                <a href="https://github.com/Budy123/Deformation-Aware-Mesh-Refinement/blob/main/examples/axl2_fish/README.md#fresh-inference-video" target="_blank" rel="noopener noreferrer">Demo details</a>.</p>
-            </div>
-          </div>
+            <a class="example-link" href="static/videos/compare/mammoth/culling.mp4" target="_blank" rel="noopener">Open video</a>
+          </article>
+          <article class="example-card" data-example="woman" aria-label="2 of 6: Character">
+            <h3>Character</h3>
+            <video class="comparison-video" autoplay controls muted loop playsinline preload="metadata" width="1000" height="750" poster="static/videos/compare/woman/culling.png" aria-label="Original and refined red-haired character under the same joint motion">
+              <source src="static/videos/compare/woman/culling.webm" type="video/webm">
+              <source src="static/videos/compare/woman/culling.mp4" type="video/mp4">
+            </video>
+            <a class="example-link" href="static/videos/compare/woman/culling.mp4" target="_blank" rel="noopener">Open video</a>
+          </article>
+          <article class="example-card" data-example="gingerbread" aria-label="3 of 6: Gingerbread">
+            <h3>Gingerbread</h3>
+            <video class="comparison-video" autoplay controls muted loop playsinline preload="metadata" width="1000" height="750" poster="static/videos/compare/gingerbread/culling.png" aria-label="Original and refined gingerbread character under the same joint motion">
+              <source src="static/videos/compare/gingerbread/culling.webm" type="video/webm">
+              <source src="static/videos/compare/gingerbread/culling.mp4" type="video/mp4">
+            </video>
+            <a class="example-link" href="static/videos/compare/gingerbread/culling.mp4" target="_blank" rel="noopener">Open video</a>
+          </article>
+          <article class="example-card" data-example="fish" aria-label="4 of 6: Fish">
+            <h3>Fish</h3>
+            <video id="comparison-video" class="comparison-video" autoplay controls muted loop playsinline preload="metadata" width="1920" height="1440" poster="static/videos/compare/fish/culling.png" aria-label="Original and refined fish meshes with identical joint motion and enlarged tail views">
+              <source src="static/videos/compare/fish/culling.webm" type="video/webm">
+              <source src="static/videos/compare/fish/culling.mp4" type="video/mp4">
+            </video>
+            <a class="example-link" href="static/videos/compare/fish/culling.mp4" target="_blank" rel="noopener">Open video</a>
+          </article>
+          <article class="example-card" data-example="dinosaur" aria-label="5 of 6: Dinosaur">
+            <h3>Dinosaur</h3>
+            <video class="comparison-video" autoplay controls muted loop playsinline preload="metadata" width="1000" height="750" poster="static/videos/compare/dinosaur/culling.png" aria-label="Original and refined dinosaur under the same joint motion">
+              <source src="static/videos/compare/dinosaur/culling.webm" type="video/webm">
+              <source src="static/videos/compare/dinosaur/culling.mp4" type="video/mp4">
+            </video>
+            <a class="example-link" href="static/videos/compare/dinosaur/culling.mp4" target="_blank" rel="noopener">Open video</a>
+          </article>
+          <article class="example-card" data-example="badger" aria-label="6 of 6: Badger">
+            <h3>Badger</h3>
+            <video class="comparison-video" autoplay controls muted loop playsinline preload="metadata" width="1000" height="750" poster="static/videos/compare/badger/culling.png" aria-label="Original and refined badger under the same joint motion">
+              <source src="static/videos/compare/badger/culling.webm" type="video/webm">
+              <source src="static/videos/compare/badger/culling.mp4" type="video/mp4">
+            </video>
+            <a class="example-link" href="static/videos/compare/badger/culling.mp4" target="_blank" rel="noopener">Open video</a>
+          </article>
         </div>
+        <div class="carousel-controls" aria-label="Browse examples">
+          <button id="examples-previous" type="button" aria-label="Previous example" aria-controls="example-track" disabled>◀</button>
+          <div id="examples-dots" class="carousel-dots" role="group" aria-label="Choose examples"></div>
+          <output id="examples-status" class="sr-only" aria-live="polite" aria-atomic="true">1–3 / 6</output>
+          <button id="examples-next" type="button" aria-label="Next example" aria-controls="example-track">▶</button>
+        </div>
+        </div>
+        <p class="examples-note">Fish uses Puppeteer inference on each mesh
+          (<a href="https://github.com/Budy123/Deformation-Aware-Mesh-Refinement/blob/main/examples/axl2_fish/README.md#fresh-inference-video" target="_blank" rel="noopener">demo details</a>).
+          The other examples animate saved comparison meshes and skinning weights; inference is not rerun.
+          Red marks visible back-facing triangles.</p>
       </div>
     </section>
 
